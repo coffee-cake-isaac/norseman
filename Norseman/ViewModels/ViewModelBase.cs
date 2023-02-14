@@ -31,7 +31,6 @@ namespace Norseman.ViewModels
         {
             if (object.Equals(storage, value)) return false;
             storage = value;
-            // Log.DebugFormat("{0}.{1} = {2}", this.GetType().Name, propertyName, storage);
             this.OnPropertyChanged(propertyName);
             return true;
         }
