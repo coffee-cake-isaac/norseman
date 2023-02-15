@@ -11,27 +11,30 @@
 
     <ScrollView>
         <VerticalStackLayout
-            Spacing="25"
+            Spacing="50"
             VerticalOptions="Center">
-            <Image Source="/Assets/Icons/compass.png" />
-            <Label
+            <Image Source="compass.png" WidthRequest="150"/>
+            <VerticalStackLayout>
+                <Label
                 Text="Let's go on an adventure!"
                 SemanticProperties.HeadingLevel="Level1"
                 FontSize="Title"
                 FontAttributes="Bold"
                 HorizontalOptions="Center" />
-            <Label
+                <Label
                 Text="Setup your profile to begin your journey."
                 SemanticProperties.HeadingLevel="Level2"
                 SemanticProperties.Description="Welcome to dot net Multi platform App UI"
                 FontSize="Subtitle"
                 HorizontalOptions="Center" />
-            <Button
+                <Button
                 Margin="15,0"
                 Text="Start my journey"
                 Command="{Binding NavigateToLandingPageView}"
                 SemanticProperties.Hint="Counts the number of times you click"
                 HorizontalOptions="FillAndExpand" />
+            </VerticalStackLayout>
+    
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>
