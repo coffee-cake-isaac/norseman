@@ -56,6 +56,16 @@
 	  <Folder Include="Models\" />
 	  <Folder Include="Views\" />
 	  <Folder Include="ViewModels\" />
+	  <Folder Include="Assets\" />
+	  <Folder Include="Assets\Icons\" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <None Remove="Assets\" />
+	  <None Remove="Assets\Icons\" />
+	  <None Remove="Assets\Icons\800px-Vegvisir.svg.png" />
+	</ItemGroup>
+	<ItemGroup>
+	  <BundleResource Include="Assets\Icons\compass.png" />
+	</ItemGroup>
 </Project>
