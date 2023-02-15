@@ -14,7 +14,7 @@
             Spacing="50"
             VerticalOptions="Center">
             <Image Source="compass.png" WidthRequest="150"/>
-            <VerticalStackLayout>
+            <VerticalStackLayout Spacing="15">
                 <Label
                 Text="Let's go on an adventure!"
                 SemanticProperties.HeadingLevel="Level1"

@@ -9,7 +9,27 @@
                 <ResourceDictionary Source="Resources/Styles/Colors.xaml" />
                 <ResourceDictionary Source="Resources/Styles/Styles.xaml" />
             </ResourceDictionary.MergedDictionaries>
+
+            <!-- Label Styles -->
+            <Style TargetType="Label" x:Key="BaseBoldLabeltyle">
+                <Setter Property="LineBreakMode" Value="TailTruncation" />
+                <Setter Property="FontAutoScalingEnabled" Value="False" />
+                <Setter Property="FontFamily" Value="BoldFont" />
+            </Style>
+
+            <Style TargetType="Label" x:Key="BaseMediumLabeltyle">
+                <Setter Property="LineBreakMode" Value="TailTruncation" />
+                <Setter Property="FontAutoScalingEnabled" Value="False" />
+                <Setter Property="FontFamily" Value="MediumFont" />
+            </Style>
+
+            <Style TargetType="Label" x:Key="BaseRegularLabeltyle">
+                <Setter Property="LineBreakMode" Value="TailTruncation" />
+                <Setter Property="FontAutoScalingEnabled" Value="False" />
+                <Setter Property="FontFamily" Value="RegularFont" />
+            </Style>
         </ResourceDictionary>
+        
     </Application.Resources>
 </Application>
 
