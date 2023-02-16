@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using static AndroidX.Navigation.NavType;
 
 namespace Norseman.ViewModels
 {
@@ -24,7 +23,10 @@ namespace Norseman.ViewModels
                     .Cast<VehicleMake>();
             }
         }
-        public LandingPageViewModel() { }
+        public LandingPageViewModel() 
+        {
+
+        }
 
         private VehicleMake _selectedMake;
     }

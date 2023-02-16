@@ -59,11 +59,4 @@
 	  <Folder Include="Views\" />
 	  <Folder Include="ViewModels\" />
 	</ItemGroup>
-
-	<ItemGroup>
-	  <None Remove="Assets\" />
-	</ItemGroup>
-	<ItemGroup>
-	  <BundleResource Include="Assets\Icons\compass.png" />
-	</ItemGroup>
 </Project>

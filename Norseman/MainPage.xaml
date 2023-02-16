@@ -25,6 +25,7 @@
                 Text="Setup your profile to begin your journey."
                 SemanticProperties.HeadingLevel="Level2"
                 SemanticProperties.Description="Welcome to dot net Multi platform App UI"
+                    TextColor="Black"
                 FontSize="Subtitle"
                 HorizontalOptions="Center" />
                 <Button

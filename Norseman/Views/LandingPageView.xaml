@@ -9,8 +9,9 @@
     <ContentPage.BindingContext>
         <vm:LandingPageViewModel />
     </ContentPage.BindingContext>
-    <VerticalStackLayout Margin="25">
-       
+    <ScrollView>
+        <VerticalStackLayout Margin="25">
+
             <VerticalStackLayout
                 Spacing="16">
                 <Label
@@ -18,18 +19,19 @@
                     HorizontalTextAlignment="Center"
                     FontSize="Title"
                     Text="What brand of car is your electric vehicle?"/>
-            <Label
+                <Label
                     HorizontalOptions="Center"
                     HorizontalTextAlignment="Center"
                     LineBreakMode="WordWrap"
                     Style="{StaticResource IntroPageTextStyle}"
-                    Text="Want to know and explain all things about the planets in the Milky Way galaxy?"/>
-            <CarouselView ItemsSource="{Binding Makes}" />
-            <Button
+                    Text="This is going to help us make useful suggestions while on your journey!"/>
+                <ListView ItemsSource="{Binding Makes}" />
+                <Button
                     Style="{StaticResource ButtonStyle}"
-                    Text="Explore Now"
-                    HorizontalOptions="Center"
-                    Margin="0,12,0,6"/>
+                    Text="Next"
+                    HorizontalOptions="FillAndExpand"/>
             </VerticalStackLayout>
-    </VerticalStackLayout>
+        </VerticalStackLayout>
+    </ScrollView>
+    
 </ContentPage>
