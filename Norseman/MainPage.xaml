@@ -13,7 +13,7 @@
         <VerticalStackLayout
             Spacing="50"
             VerticalOptions="Center">
-            <Image Source="compass.png" WidthRequest="150"/>
+            <Image Source="compass.png" HeightRequest="150" WidthRequest="150"/>
             <VerticalStackLayout Spacing="15">
                 <Label
                 Text="Let's go on an adventure!"
@@ -25,7 +25,6 @@
                 Text="Setup your profile to begin your journey."
                 SemanticProperties.HeadingLevel="Level2"
                 SemanticProperties.Description="Welcome to dot net Multi platform App UI"
-                    TextColor="Black"
                 FontSize="Subtitle"
                 HorizontalOptions="Center" />
                 <Button
