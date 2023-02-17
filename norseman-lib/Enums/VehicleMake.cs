@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Norseman.Enums
+namespace Norseman.Lib.Enums
 {
     public enum VehicleMake
     {

@@ -1,11 +1,11 @@
-﻿using Norseman.Enums;
+﻿using Norseman.Lib.Enums;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Norseman.Models
+namespace Norseman.Lib.Models
 {
     public class Vehicle
     {

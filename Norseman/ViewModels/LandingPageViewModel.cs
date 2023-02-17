@@ -1,4 +1,4 @@
-﻿using Norseman.Enums;
+﻿using Norseman.Lib.Enums;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,13 +25,13 @@ namespace Norseman.ViewModels
             }
         }
 
-        public Visibility MakeVisibility
+        public bool IsMakeVisible
         {
             get => _makeVisibility;
             set => SetProperty(ref _makeVisibility, value);
         }
 
-        public Visibility ModelVisibility
+        public bool IsModelVisible
         {
             get => _modelVisibility;
             set => SetProperty(ref _modelVisibility, value);
@@ -41,16 +41,17 @@ namespace Norseman.ViewModels
 
         public LandingPageViewModel() 
         {
-
+            IsMakeVisible = false;
+            IsModelVisible = true;
         }
 
         public void SolidifyMake()
         {
-            MakeVisibility = Visibility.Collapsed;
-            ModelVisibility = Visibility.Visible;
+            IsMakeVisible = false;
+            IsModelVisible = true;
         }
 
         private VehicleMake _selectedMake;
-        private Visibility _makeVisibility, _modelVisibility;
+        private bool _makeVisibility, _modelVisibility;
     }
 }

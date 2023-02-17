@@ -32,26 +32,7 @@
                     Command="{Binding SolidfyMakeCommand}"
                     HorizontalOptions="FillAndExpand"/>
             </VerticalStackLayout>
-                        <VerticalStackLayout IsVisible="{Binding MakeVisibility}"
-                Spacing="16">
-                <Label
-                    HorizontalOptions="Center"
-                    HorizontalTextAlignment="Center"
-                    FontSize="Title"
-                    Text="What brand of car is your electric vehicle?"/>
-                <Label
-                    HorizontalOptions="Center"
-                    HorizontalTextAlignment="Center"
-                    LineBreakMode="WordWrap"
-                    Style="{StaticResource IntroPageTextStyle}"
-                    Text="This is going to help us make useful suggestions while on your journey!"/>
-                <ListView ItemsSource="{Binding Makes}" />
-                <Button
-                    Style="{StaticResource ButtonStyle}"
-                    Text="Next"
-                    Command="{Binding SolidfyMakeCommand}"
-                    HorizontalOptions="FillAndExpand"/>
-            </VerticalStackLayout>
+
         </VerticalStackLayout>
     </ScrollView>
     
