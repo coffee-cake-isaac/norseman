@@ -1,4 +1,4 @@
-namespace Norseman.Views;
+namespace Norseman.Views.Onboarding;
 
 public partial class LandingPageView : ContentPage
 {

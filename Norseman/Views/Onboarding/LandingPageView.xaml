@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:vm="clr-namespace:Norseman.ViewModels"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Norseman.Views.LandingPageView"
+             x:Class="Norseman.Views.Onboarding.LandingPageView"
              Shell.NavBarIsVisible="False"
              Shell.ForegroundColor="Black"
              Shell.TitleColor="Black">
@@ -12,7 +12,7 @@
     <ScrollView>
         <VerticalStackLayout Margin="25">
 
-            <VerticalStackLayout
+            <VerticalStackLayout IsVisible="{Binding MakeVisibility}"
                 Spacing="16">
                 <Label
                     HorizontalOptions="Center"
@@ -29,6 +29,27 @@
                 <Button
                     Style="{StaticResource ButtonStyle}"
                     Text="Next"
+                    Command="{Binding SolidfyMakeCommand}"
+                    HorizontalOptions="FillAndExpand"/>
+            </VerticalStackLayout>
+                        <VerticalStackLayout IsVisible="{Binding MakeVisibility}"
+                Spacing="16">
+                <Label
+                    HorizontalOptions="Center"
+                    HorizontalTextAlignment="Center"
+                    FontSize="Title"
+                    Text="What brand of car is your electric vehicle?"/>
+                <Label
+                    HorizontalOptions="Center"
+                    HorizontalTextAlignment="Center"
+                    LineBreakMode="WordWrap"
+                    Style="{StaticResource IntroPageTextStyle}"
+                    Text="This is going to help us make useful suggestions while on your journey!"/>
+                <ListView ItemsSource="{Binding Makes}" />
+                <Button
+                    Style="{StaticResource ButtonStyle}"
+                    Text="Next"
+                    Command="{Binding SolidfyMakeCommand}"
                     HorizontalOptions="FillAndExpand"/>
             </VerticalStackLayout>
         </VerticalStackLayout>

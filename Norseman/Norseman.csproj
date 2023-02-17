@@ -58,5 +58,11 @@
 	  <Folder Include="Resources\Images\Makes\" />
 	  <Folder Include="Views\" />
 	  <Folder Include="ViewModels\" />
+	  <Folder Include="Views\Onboarding\" />
+	  <Folder Include="Enums\VehicleModels\" />
+	</ItemGroup>
+	<ItemGroup>
+	  <None Remove="Views\Onboarding\" />
+	  <None Remove="Enums\VehicleModels\" />
 	</ItemGroup>
 </Project>

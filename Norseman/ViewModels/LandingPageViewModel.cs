@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Input;
 
 namespace Norseman.ViewModels
 {
@@ -23,11 +24,33 @@ namespace Norseman.ViewModels
                     .Cast<VehicleMake>();
             }
         }
+
+        public Visibility MakeVisibility
+        {
+            get => _makeVisibility;
+            set => SetProperty(ref _makeVisibility, value);
+        }
+
+        public Visibility ModelVisibility
+        {
+            get => _modelVisibility;
+            set => SetProperty(ref _modelVisibility, value);
+        }
+
+        public ICommand SolidfyMakeCommand => new Command(SolidifyMake);
+
         public LandingPageViewModel() 
         {
 
         }
 
+        public void SolidifyMake()
+        {
+            MakeVisibility = Visibility.Collapsed;
+            ModelVisibility = Visibility.Visible;
+        }
+
         private VehicleMake _selectedMake;
+        private Visibility _makeVisibility, _modelVisibility;
     }
 }
