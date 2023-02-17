@@ -6,9 +6,7 @@
              Shell.NavBarIsVisible="False"
              Shell.ForegroundColor="Black"
              Shell.TitleColor="Black">
-    <ContentPage.BindingContext>
-        <vm:LandingPageViewModel />
-    </ContentPage.BindingContext>
+
     <ScrollView>
         <VerticalStackLayout Margin="25">
 

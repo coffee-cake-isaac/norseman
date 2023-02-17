@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Norseman.Lib.Services.Navigation;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -10,6 +11,13 @@ namespace Norseman.ViewModels
 {
     public abstract class ViewModelBase : INotifyPropertyChanged
     {
+        public INavigationService NavigationService { get; private set; }
+
+        public ViewModelBase(INavigationService navigationService)
+        {
+            NavigationService = navigationService;
+        }
+
         /// <summary>
         /// Multicast event for property change notifications.
         /// </summary>

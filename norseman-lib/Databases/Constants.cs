@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace norseman_lib.Databases
+namespace Norseman.Lib.Databases
 {
     public static class Constants
     {

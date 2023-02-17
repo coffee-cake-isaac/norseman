@@ -1,11 +1,37 @@
-﻿namespace Norseman;
+﻿using Norseman.Lib.Services.Navigation;
+
+namespace Norseman;
 
 public partial class AppShell : Shell
 {
-	public AppShell()
+	private readonly INavigationService _navigationService;
+
+	public AppShell(INavigationService navigationService)
 	{
-		InitializeComponent();
-		Routing.RegisterRoute("LandingPageView", typeof(Views.Onboarding.LandingPageView));
+		_navigationService = navigationService;
+
+        InitializeRoutes();
+
+        InitializeComponent();
 	}
+
+    public AppShell()
+    {
+    }
+
+    protected override async void OnHandlerChanged()
+    {
+        base.OnHandlerChanged();
+
+        if (Handler is not null)
+        {
+            await _navigationService.InitializeAsync();
+        }
+    }
+
+    private static void InitializeRoutes()
+	{
+        Routing.RegisterRoute("LandingPageView", typeof(Views.Onboarding.LandingPageView));
+    }
 }
 

@@ -1,4 +1,5 @@
 ﻿using Norseman.Lib.Enums;
+using Norseman.Lib.Services.Navigation;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -58,7 +59,7 @@ namespace Norseman.ViewModels
         /// <summary>
         /// Default constructor
         /// </summary>
-        public LandingPageViewModel() 
+        public LandingPageViewModel(INavigationService navigationService) : base(navigationService) 
         {
             IsMakeVisible = false;
             IsModelVisible = true;

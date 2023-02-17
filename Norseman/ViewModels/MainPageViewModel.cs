@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Norseman.Lib.Services.Navigation;
+using System;
 using System.Windows.Input;
 
 namespace Norseman.ViewModels
@@ -7,13 +8,18 @@ namespace Norseman.ViewModels
 	{
 		public ICommand NavigateToLandingPageView => new Command(NavigateToLandingPageViewCommand);
 
+		/// <summary>
+		/// Navigates the user to the Landing Page for the onboarding wizard
+		/// </summary>
+		/// <param name="obj"></param>
         private async void NavigateToLandingPageViewCommand(object obj)
         {
-			await Shell.Current.GoToAsync("LandingPageView");
+			await NavigationService.NavigateToAsync("LandingPageView");
 		}
 
-        public MainPageViewModel()
+        public MainPageViewModel(INavigationService navigationService) : base(navigationService)
 		{
+
 		}
 	}
 }

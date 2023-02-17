@@ -1,11 +1,13 @@
-﻿namespace Norseman;
+﻿using Norseman.ViewModels;
+
+namespace Norseman;
 
 public partial class MainPage : ContentPage
 {
-	int count = 0;
-
-	public MainPage()
+	public MainPage(MainPageViewModel viewModel)
 	{
+		BindingContext = viewModel;
+
 		InitializeComponent();
 	}
 }
