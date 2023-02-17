@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace Norseman.Enums.VehicleModels
 {
-    internal class TeslaModels
+    public enum TeslaModels
     {
+        MODEL_S,
+        MODEL_3,
+        MODEL_X,
+        MODEL_Y
     }
 }

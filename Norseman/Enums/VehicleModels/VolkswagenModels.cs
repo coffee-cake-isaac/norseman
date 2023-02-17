@@ -6,7 +6,14 @@ using System.Threading.Tasks;
 
 namespace Norseman.Enums.VehicleModels
 {
-    internal class VolkswagenModels
+    public enum VolkswagenModels
     {
+        ID_3,
+        ID_4,
+        ID_4_GTX
+        ID_5,
+        ID_5_GTX
+        ID_6,
+        ID_BUZZ
     }
 }

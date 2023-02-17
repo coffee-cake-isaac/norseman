@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Norseman.Enums.VehicleModels
 {
-    internal class RamModels
+    public enum RamModels
     {
+        1500_REV
     }
 }

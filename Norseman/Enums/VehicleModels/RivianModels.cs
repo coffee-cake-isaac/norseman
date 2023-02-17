@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace Norseman.Enums.VehicleModels
 {
-    internal class RivianModels
+    public enum RivianModels
     {
+        R1T,
+        R1S
     }
 }

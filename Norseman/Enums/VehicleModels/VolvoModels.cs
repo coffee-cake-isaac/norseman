@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace Norseman.Enums.VehicleModels
 {
-    internal class VolvoModels
+    public enum VolvoModels
     {
+        C40,
+        XC40
     }
 }

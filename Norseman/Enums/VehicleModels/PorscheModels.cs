@@ -16,6 +16,7 @@ namespace Norseman.Enums.VehicleModels
         TAYCAN_GTS_CROSS_TURISMO,
         TAYCAN_TURBO,
         TAYCAN_TURBO_CROSS_TURISMO,
-
+        TAYCAN_TURBO_S,
+        TAYCAN_TURBO_S_CROS_TURISMO
     }
 }

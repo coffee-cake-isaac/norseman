@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Norseman.Enums.VehicleModels
 {
-    internal class SubaruModels
+    public enum SubaruModels
     {
+        SOLTERRA
     }
 }
