@@ -17,6 +17,11 @@ namespace Norseman.ViewModels
 			await NavigationService.NavigateToAsync("LandingPageView");
 		}
 
+
+		/// <summary>
+		/// Default constructor
+		/// </summary>
+		/// <param name="navigationService">The navigation service used for the application</param>
         public MainPageViewModel(INavigationService navigationService) : base(navigationService)
 		{
 

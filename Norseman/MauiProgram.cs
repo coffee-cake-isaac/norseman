@@ -10,6 +10,10 @@ namespace Norseman;
 
 public static class MauiProgram
 {
+	/// <summary>
+	/// Main entry point for the MAUI program
+	/// </summary>
+	/// <returns></returns>
 	public static MauiApp CreateMauiApp()
 	{
 		var builder = MauiApp.CreateBuilder();
@@ -34,6 +38,11 @@ public static class MauiProgram
 		return builder.Build();
 	}
 
+	/// <summary>
+	/// Registers the view model with the containers for use throughout the app
+	/// </summary>
+	/// <param name="mauiAppBuilder">The builder responsible for instantiating instances</param>
+	/// <returns>A completed builder with view models</returns>
 	public static MauiAppBuilder RegisterViewModels(this MauiAppBuilder mauiAppBuilder)
 	{
 		mauiAppBuilder.Services.AddSingleton<MainPageViewModel>();
@@ -42,6 +51,11 @@ public static class MauiProgram
         return mauiAppBuilder;
 	}
 
+    /// <summary>
+    /// Registers the view model with the containers for use throughout the app
+    /// </summary>
+    /// <param name="mauiAppBuilder">The builder responsible for instantiating instances</param>
+    /// <returns>A completed builder with views</returns>
     public static MauiAppBuilder RegisterViews(this MauiAppBuilder mauiAppBuilder)
     {
         mauiAppBuilder.Services.AddSingleton<MainPage>();
