@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 17.0.31611.283
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Norseman", "Norseman\Norseman.csproj", "{6392153D-A55F-4B8D-BEC9-173FBA1AA091}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Norseman", "Norseman\Norseman.csproj", "{6392153D-A55F-4B8D-BEC9-173FBA1AA091}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "norseman-lib", "norseman-lib\norseman-lib.csproj", "{C95071B6-3C2D-4A9E-831E-7C32209F2C4A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,6 +19,10 @@ Global
 		{6392153D-A55F-4B8D-BEC9-173FBA1AA091}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6392153D-A55F-4B8D-BEC9-173FBA1AA091}.Release|Any CPU.Build.0 = Release|Any CPU
 		{6392153D-A55F-4B8D-BEC9-173FBA1AA091}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{C95071B6-3C2D-4A9E-831E-7C32209F2C4A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C95071B6-3C2D-4A9E-831E-7C32209F2C4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C95071B6-3C2D-4A9E-831E-7C32209F2C4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C95071B6-3C2D-4A9E-831E-7C32209F2C4A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
