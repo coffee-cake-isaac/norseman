@@ -31,12 +31,15 @@ namespace Norseman.Lib.Databases.Access
                 return;
 
             database = new SQLiteAsyncConnection(Constants.VehicleMakeDatabasePath, Constants.Flags);
-            var result = await database.CreateTableAsync<CarMake>();
-            await CreateDefaultMakes();
+            await database.CreateTableAsync<CarMake>();
         }
         
-        public async Task CreateDefaultMakes()
+        public async Task SeedDefaultData()
         {
+            var makes = await GetCarMakesAsync();
+
+            if (makes.Any()) return;
+
             foreach (var make in Enum.GetValues(typeof(Make)))
             {
                 await SaveCarMakeAsync(new CarMake
@@ -44,8 +47,6 @@ namespace Norseman.Lib.Databases.Access
                     Name = make.ToString(),
                 });
             }
-
-            Console.WriteLine("All done");
         }
 
         /// <summary>

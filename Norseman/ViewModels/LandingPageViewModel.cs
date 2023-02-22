@@ -25,7 +25,7 @@ namespace Norseman.ViewModels
         /// The list of makes that users can currently select from
         /// <see cref="Make"/>
         /// </summary>
-        public IEnumerable<CarMake> Makes
+        public List<CarMake> Makes
         {
             get => _makes;
             set => SetProperty(ref _makes, value);
@@ -57,16 +57,17 @@ namespace Norseman.ViewModels
         /// <summary>
         /// Default constructor
         /// </summary>
-        public LandingPageViewModel(INavigationService navigationService, CarMakeDatabase database) : base(navigationService)
+        public LandingPageViewModel(INavigationService navigationService, CarMakeDatabase database) : base(navigationService, database)
         {
             this.database = database;
-            Task.Run(async () =>
-            {
-                await this.database.Init();
-                Makes = await this.database.GetCarMakesAsync();
-            });
             IsMakeVisible = false;
             IsModelVisible = true;
+            PopulateMakes();
+        }
+
+        private async void PopulateMakes()
+        {
+            Makes = await database.GetCarMakesAsync();
         }
 
         /// <summary>
@@ -82,7 +83,7 @@ namespace Norseman.ViewModels
         /// Private backing fields
         /// </summary>
         private Make _selectedMake;
-        private IEnumerable<CarMake> _makes;
+        private List<CarMake> _makes;
         private CarMakeDatabase database;
         private bool _makeVisibility, _modelVisibility;
     }

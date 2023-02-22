@@ -1,4 +1,5 @@
-﻿using Norseman.Lib.Services.Navigation;
+﻿using Norseman.Lib.Databases.Access;
+using Norseman.Lib.Services.Navigation;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,9 +14,12 @@ namespace Norseman.ViewModels
     {
         public INavigationService NavigationService { get; private set; }
 
-        public ViewModelBase(INavigationService navigationService)
+        public CarMakeDatabase CarMakeDatabase { get; private set; }
+
+        public ViewModelBase(INavigationService navigationService, CarMakeDatabase database)
         {
             NavigationService = navigationService;
+            CarMakeDatabase = database;
         }
 
         /// <summary>
