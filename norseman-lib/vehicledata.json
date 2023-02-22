@@ -1,35 +1,152 @@
 {
-  "vehicles": [
-    {
-      "modelName": "Model S",
-      "make": "Tesla",
-      "trim": [
-        "Signature",
-        "Signature Performance",
-        "60",
-        "60D",
-        "70D",
-        "85D",
-        "P85D",
-        "P90D",
-        "P100D",
-        "Long Range",
-        "Plaid",
-        "P85"
-      ]
-    },
-    {
-      "modelName": "Model 3",
-      "make": "Tesla",
-      "trim": [
-        "Standard Range",
-        "Standard Range Plus",
-        "Standard Range Plus LFP",
-        "Mid-Range",
-        "Long Range Rear Wheel Drive",
-        "Long Range All Wheel Drive",
-        "Performance"
-      ]
-    }
-  ]
+  "Audi": {
+    "vehicles": [
+      {
+        "modelName": "Q4 e-tron",
+        "trim": [
+          "40 e-tron Premium",
+          "50 e-tron Premium",
+          "40 e-tron Premium Plus",
+          "50 e-tron Premium Plus",
+          "50 e-tron Prestige quattro"
+        ]
+      },
+      {
+        "modelName": "e-tron",
+        "trim": [
+          "Premium",
+          "Premium Plus",
+          "Chronos"
+        ]
+      },
+      {
+        "modelName": "e-tron S",
+        "trim": [
+          "e-tron S Premium Plus",
+          "e-tron S Prestige"
+        ]
+      },
+      {
+        "modelName": "e-tron GT",
+        "trim": [
+          "Premium Plus quattro",
+          "Prestige Plus quattro"
+        ]
+      }
+    ]
+  },
+  "BMW": {
+    "vehicles": [
+      {
+        "modelName": "i4",
+        "trim": [
+          "i4 eDrive35",
+          "i4 eDrive40"
+        ]
+      },
+      {
+        "modelName": "iX",
+        "trim": [
+          "iX xDrive50"
+        ]
+      },
+      {
+        "modelName": "i7",
+        "trim": [
+          "i7 xDrive60 Sedan"
+        ]
+      }
+    ]
+  },
+  "Cadillac": {
+    "vehicles": [
+      {
+        "modelName": "Lyriq",
+        "trim": [
+          "Sport 1 RWD",
+          "Sport 2 RWD",
+          "Sport 3 RWD",
+          "Sport 1 AWD",
+          "Sport 2 AWD",
+          "Sport 3 AWD"
+        ]
+      }
+    ]
+  },
+  "Chevrolet": {},
+  "Ford": {},
+  "Genesis": {},
+  "GMC": {},
+  "Honda": {},
+  "Jaguar": {},
+  "Kia": {},
+  "Lucid": {},
+  "Mercedes": {},
+  "Mini": {},
+  "Nissan": {},
+  "Polestar": {},
+  "Porsche": {},
+  "RAM": {},
+  "Rivian": {},
+  "Subaru": {},
+  "Tesla": {
+    "vehicles": [
+      {
+        "modelName": "Model S",
+        "trim": [
+          "Signature",
+          "Signature Performance",
+          "60",
+          "60D",
+          "70D",
+          "85D",
+          "P85D",
+          "P90D",
+          "P100D",
+          "Long Range",
+          "Plaid",
+          "P85"
+        ]
+      },
+      {
+        "modelName": "Model 3",
+        "trim": [
+          "Standard Range",
+          "Standard Range Plus",
+          "Standard Range Plus LFP",
+          "Mid-Range",
+          "Long Range Rear Wheel Drive",
+          "Long Range All Wheel Drive",
+          "Performance"
+        ]
+      },
+      {
+        "modelName": "Model X",
+        "trim": [
+          "60D",
+          "75D",
+          "90D",
+          "P90D",
+          "P90DL",
+          "100D",
+          "P100D",
+          "P100DL",
+          "Long Range",
+          "Performance",
+          "Plaid"
+        ]
+      },
+      {
+        "modelName": "Model Y",
+        "trim": [
+          "Standard Range",
+          "Long Range All Wheel Drive",
+          "Performance"
+        ]
+      }
+    ]
+  },
+  "Toyota": {},
+  "Volkswagen": {},
+  "Volvo": {}
 }
