@@ -1,4 +1,5 @@
-﻿using Norseman.Lib.Enums;
+﻿using Norseman.Lib.Databases.Access;
+using Norseman.Lib.Models;
 using Norseman.Lib.Services.Navigation;
 using System;
 using System.Collections.Generic;
@@ -14,7 +15,7 @@ namespace Norseman.ViewModels
         /// <summary>
         /// The user selected manufacturer for their EV
         /// </summary>
-        public VehicleMake SelectedMake
+        public Make SelectedMake
         {
             get => _selectedMake;
             set => SetProperty(ref _selectedMake, value);
@@ -22,15 +23,12 @@ namespace Norseman.ViewModels
 
         /// <summary>
         /// The list of makes that users can currently select from
-        /// <see cref="VehicleMake"/>
+        /// <see cref="Make"/>
         /// </summary>
-        public IEnumerable<VehicleMake> Makes
+        public IEnumerable<CarMake> Makes
         {
-            get
-            {
-                return Enum.GetValues(typeof(VehicleMake))
-                    .Cast<VehicleMake>();
-            }
+            get => _makes;
+            set => SetProperty(ref _makes, value);
         }
 
         /// <summary>
@@ -59,14 +57,20 @@ namespace Norseman.ViewModels
         /// <summary>
         /// Default constructor
         /// </summary>
-        public LandingPageViewModel(INavigationService navigationService) : base(navigationService) 
+        public LandingPageViewModel(INavigationService navigationService, CarMakeDatabase database) : base(navigationService)
         {
+            this.database = database;
+            Task.Run(async () =>
+            {
+                await this.database.Init();
+                Makes = await this.database.GetCarMakesAsync();
+            });
             IsMakeVisible = false;
             IsModelVisible = true;
         }
 
         /// <summary>
-        /// Solidifies the make by preventing the user from making a different <see cref="VehicleMake"/> selection
+        /// Solidifies the make by preventing the user from making a different <see cref="Make"/> selection
         /// </summary>
         public void SolidifyMake()
         {
@@ -77,7 +81,9 @@ namespace Norseman.ViewModels
         /// <summary>
         /// Private backing fields
         /// </summary>
-        private VehicleMake _selectedMake;
+        private Make _selectedMake;
+        private IEnumerable<CarMake> _makes;
+        private CarMakeDatabase database;
         private bool _makeVisibility, _modelVisibility;
     }
 }

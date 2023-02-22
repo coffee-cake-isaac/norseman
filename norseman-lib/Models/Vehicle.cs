@@ -1,5 +1,4 @@
-﻿using Norseman.Lib.Enums;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,7 +16,7 @@ namespace Norseman.Lib.Models
         /// <summary>
         /// The make of the current vehicle
         /// </summary>
-        public VehicleMake Make { get; set; }
+        public Make Make { get; set; }
 
         /// <summary>
         /// The model of the current selected vehicle

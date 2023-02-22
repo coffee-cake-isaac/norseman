@@ -2,6 +2,7 @@
 using Microsoft.Extensions.Logging;
 using Microsoft.Maui.Hosting;
 using Norseman.Lib.Databases;
+using Norseman.Lib.Databases.Access;
 using Norseman.Lib.Services.Navigation;
 using Norseman.ViewModels;
 using Norseman.Views.Onboarding;
@@ -25,7 +26,8 @@ public static class MauiProgram
 				fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
 			})
 			.RegisterViewModels()
-			.RegisterViews();
+			.RegisterViews()
+			.RegisterDataAccess();
 
 		//builder.Services.AddSingleton<>
 
@@ -34,7 +36,6 @@ public static class MauiProgram
 #if DEBUG
         builder.Logging.AddDebug();
 #endif
-
 		return builder.Build();
 	}
 
@@ -63,5 +64,13 @@ public static class MauiProgram
 
         return mauiAppBuilder;
     }
+
+	public static MauiAppBuilder RegisterDataAccess(this MauiAppBuilder mauiAppBuilder)
+	{
+		mauiAppBuilder.Services.AddSingleton<CarMakeDatabase>();
+		mauiAppBuilder.Services.AddSingleton<CarModelDatabase>();
+
+        return mauiAppBuilder;
+	}
 }
 

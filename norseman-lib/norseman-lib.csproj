@@ -24,8 +24,8 @@
 	  <None Remove="data\" />
 	</ItemGroup>
 	<ItemGroup>
-	  <Folder Include="Enums\" />
 	  <Folder Include="data\" />
+	  <Folder Include="Enums\" />
 	</ItemGroup>
 	<ItemGroup>
 	  <PackageReference Include="sqlite-net-pcl" Version="1.8.116" />
