@@ -24,7 +24,7 @@ namespace Norseman.Lib.Databases.Access
         /// Initializes the <see cref="database"/> object if it has not been already created.
         /// Otherwise, returns the instantiated object for accessing the local sqlite database
         /// </summary>
-        /// <returns></returns>
+        /// <returns>The status of the task</returns>
         public async Task Init()
         {
             if (database is not null)
@@ -34,6 +34,10 @@ namespace Norseman.Lib.Databases.Access
             await database.CreateTableAsync<CarMake>();
         }
         
+        /// <summary>
+        /// Populates the on-device sqlite database with default vehicle manufacturers
+        /// </summary>
+        /// <returns>The task status</returns>
         public async Task SeedDefaultData()
         {
             var makes = await GetCarMakesAsync();
@@ -52,7 +56,7 @@ namespace Norseman.Lib.Databases.Access
         /// <summary>
         /// Returns a list of all <see cref="CarMake"/> objects store the in local sqlite database
         /// </summary>
-        /// <returns></returns>
+        /// <returns>The status of the task</returns>
         public async Task<List<CarMake>> GetCarMakesAsync()
         {
             await Init();

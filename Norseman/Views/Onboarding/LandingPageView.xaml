@@ -1,6 +1,7 @@
 ﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:vm="clr-namespace:Norseman.ViewModels"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:model="clr-namespace:Norseman.Lib.Models;assembly=norseman-lib"
              x:Class="Norseman.Views.Onboarding.LandingPageView"
              x:DataType="{x:Type vm:LandingPageViewModel}"
              Shell.NavBarIsVisible="False"
@@ -8,7 +9,6 @@
              Shell.TitleColor="Black">
     <ScrollView>
         <VerticalStackLayout Margin="25">
-
             <VerticalStackLayout IsVisible="{Binding IsMakeVisible}"
                 Spacing="16">
                 <Label
@@ -24,7 +24,7 @@
                     Text="This is going to help us make useful suggestions while on your journey!"/>
                 <ListView ItemsSource="{Binding Makes}">
                     <ListView.ItemTemplate>
-                        <DataTemplate>
+                        <DataTemplate x:DataType="model:CarMake">
                         <ViewCell>
                             <Grid Padding="10">
                                 <Label Grid.Column="1"
@@ -41,8 +41,6 @@
                     Command="{Binding SolidfyMakeCommand}"
                     HorizontalOptions="FillAndExpand"/>
             </VerticalStackLayout>
-
         </VerticalStackLayout>
     </ScrollView>
-
 </ContentPage>

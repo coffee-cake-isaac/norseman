@@ -57,11 +57,11 @@ namespace Norseman.ViewModels
         /// <summary>
         /// Default constructor
         /// </summary>
-        public LandingPageViewModel(INavigationService navigationService, CarMakeDatabase database) : base(navigationService, database)
+        public LandingPageViewModel(INavigationService navigationService, CarMakeDatabase database) : base(navigationService)
         {
             this.database = database;
-            IsMakeVisible = false;
-            IsModelVisible = true;
+            IsMakeVisible = true;
+            IsModelVisible = false;
             PopulateMakes();
         }
 

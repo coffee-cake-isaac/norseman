@@ -70,4 +70,5 @@
 	<ItemGroup>
 	  <ProjectReference Include="..\norseman-lib\norseman-lib.csproj" />
 	</ItemGroup>
+	<ProjectExtensions><VisualStudio><UserProperties XamarinHotReloadDebuggerTimeoutExceptionNorsemanHideInfoBar="True" /></VisualStudio></ProjectExtensions>
 </Project>

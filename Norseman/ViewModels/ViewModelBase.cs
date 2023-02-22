@@ -14,12 +14,10 @@ namespace Norseman.ViewModels
     {
         public INavigationService NavigationService { get; private set; }
 
-        public CarMakeDatabase CarMakeDatabase { get; private set; }
 
-        public ViewModelBase(INavigationService navigationService, CarMakeDatabase database)
+        public ViewModelBase(INavigationService navigationService)
         {
             NavigationService = navigationService;
-            CarMakeDatabase = database;
         }
 
         /// <summary>

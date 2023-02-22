@@ -23,7 +23,7 @@ namespace Norseman.ViewModels
 		/// Default constructor
 		/// </summary>
 		/// <param name="navigationService">The navigation service used for the application</param>
-        public MainPageViewModel(INavigationService navigationService, CarMakeDatabase database) : base(navigationService, database)
+        public MainPageViewModel(INavigationService navigationService, CarMakeDatabase database) : base(navigationService)
 		{
 
 		}

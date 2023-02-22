@@ -3,6 +3,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Maui.Hosting;
 using Norseman.Lib.Databases;
 using Norseman.Lib.Databases.Access;
+using Norseman.Lib.Models;
 using Norseman.Lib.Services.Navigation;
 using Norseman.ViewModels;
 using Norseman.Views.Onboarding;
@@ -72,8 +73,9 @@ public static class MauiProgram
 
         using (var service = mauiAppBuilder.Services.BuildServiceProvider())
         {
-            var database = service.GetService<CarMakeDatabase>();
-            Task.Run(database.SeedDefaultData);
+            var carMakeDatabase = service.GetService<CarMakeDatabase>();
+            var carModelDatabase = service.GetService<CarModelDatabase>();
+            Task.Run(carMakeDatabase.SeedDefaultData);
         }
 
         return mauiAppBuilder;

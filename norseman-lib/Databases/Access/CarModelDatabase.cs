@@ -34,11 +34,28 @@ namespace Norseman.Lib.Databases.Access
             var result = await database.CreateTableAsync<CarModel>();
         }
 
+        public async Task SeedDefaultModels()
+        {
+            await Init();
+
+            var makes = await GetCarModelsAsync();
+
+            if (makes.Any()) return;
+
+            foreach (var make in Enum.GetValues(typeof(CarModel)))
+            {
+                await SaveCarModelAsync(new CarModel
+                {
+                    CarMake = 
+                });
+            }
+        }
+
         /// <summary>
         /// Returns a list of all <see cref="CarModel"/> objects store the in local sqlite database
         /// </summary>
         /// <returns></returns>
-        public async Task<List<CarModel>> GetCarMakesAsync()
+        public async Task<List<CarModel>> GetCarModelsAsync()
         {
             await Init();
             return await database.Table<CarModel>().ToListAsync();
@@ -49,7 +66,7 @@ namespace Norseman.Lib.Databases.Access
         /// </summary>
         /// <param name="carMake">The name of the car make to return data for</param>
         /// <returns>A <see cref="CarModel"/>object belonging to the user requested make</returns>
-        public async Task<CarModel> GetCarMakeAsync(string carModel)
+        public async Task<CarModel> GetCarModelAsync(string carModel)
         {
             await Init();
             return await database.Table<CarModel>().Where(x => x.Model == carModel).FirstOrDefaultAsync();
@@ -61,7 +78,7 @@ namespace Norseman.Lib.Databases.Access
         /// </summary>
         /// <param name="make">The name of the car make used for upsert</param>
         /// <returns>All information regarding the user requested <see cref="CarMake"/></returns>
-        public async Task<int> SaveCarMakeAsync(CarModel make)
+        public async Task<int> SaveCarModelAsync(CarModel make)
         {
             await Init();
             if (make.Id != 0)

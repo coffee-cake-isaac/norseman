@@ -1,0 +1,35 @@
+{
+  "vehicles": [
+    {
+      "modelName": "Model S",
+      "make": "Tesla",
+      "trim": [
+        "Signature",
+        "Signature Performance",
+        "60",
+        "60D",
+        "70D",
+        "85D",
+        "P85D",
+        "P90D",
+        "P100D",
+        "Long Range",
+        "Plaid",
+        "P85"
+      ]
+    },
+    {
+      "modelName": "Model 3",
+      "make": "Tesla",
+      "trim": [
+        "Standard Range",
+        "Standard Range Plus",
+        "Standard Range Plus LFP",
+        "Mid-Range",
+        "Long Range Rear Wheel Drive",
+        "Long Range All Wheel Drive",
+        "Performance"
+      ]
+    }
+  ]
+}
